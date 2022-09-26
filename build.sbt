@@ -38,7 +38,5 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-test-sbt" % ZIOVersion  % Test
 )
 
-resolvers ++= Seq(
-  "Secured Central Repository" at "https://repo1.maven.org/maven2",
-  Resolver.sonatypeRepo("snapshots")
-)
+resolvers += Resolver.DefaultMavenRepository
+resolvers ++= Resolver.sonatypeOssRepos("snapshots")
